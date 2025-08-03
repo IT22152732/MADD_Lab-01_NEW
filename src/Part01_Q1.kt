@@ -1,10 +1,10 @@
-fun whoAmI(value: Any): String {
-    return value::class.simpleName ?: "Unknown"
+fun whoAmI(input: Any): String {
+    return input::class.simpleName ?: "Unknown"
 }
 
 fun main() {
-    println("Type of 10: ${whoAmI(10)}")
-    println("Type of 10.5: ${whoAmI(10.5)}")
-    println("Type of \"Hello\": ${whoAmI("Hello")}")
-    println("Type of true: ${whoAmI(true)}")
+    println("Type: " + whoAmI(123))
+    println("Type: " + whoAmI("Hello"))
+    println("Type: " + whoAmI(true))
+    println("Type: " + whoAmI(12.34))
 }
